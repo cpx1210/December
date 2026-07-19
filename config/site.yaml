@@ -73,6 +73,7 @@ categoryMap:
   笔记: note
   工具: tools
   CTF: ctf
+  周刊: weekly
   # Secondary categories (for nested paths)
   # Add more as needed:
   # 书摘: reading
@@ -125,7 +126,20 @@ featuredCategories:
 #   highlightOnHome: 是否在首页高亮显示最新文章（可选，默认 true，显式设为 false 可禁用）
 #   links: 相关链接配置（可选）
 # -----------------------------------------------------------------------------
-featuredSeries: []
+featuredSeries:
+  - slug: weekly
+    categoryName: 周刊
+    label: 我的周刊
+    fullName: December 周刊
+    description: |
+      每周记录技术学习、工具发现与生活见闻。
+    cover: /img/weekly_header.webp
+    enabled: true
+    icon: ri:newspaper-line
+    highlightOnHome: true
+    links:
+      github: https://github.com/cpx1210/December
+      rss: /rss.xml
   # 示例：添加第二个系列（取消注释启用）
   # - slug: reading # URL 路径: /reading
   #   categoryName: 书摘
