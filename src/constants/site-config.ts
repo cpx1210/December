@@ -210,10 +210,10 @@ export const icpConfig: { text: string; link?: string } | undefined = (() => {
   return raw;
 })();
 
-const { title, alternate, subtitle } = siteConfig;
+const { title, subtitle } = siteConfig;
 
 export const seoConfig = {
-  title: `${alternate ? `${alternate} = ` : ''}${title}${subtitle ? ` = ${subtitle}` : ''}`,
+  title: `${title}${subtitle ? ` = ${subtitle}` : ''}`,
   description: siteConfig.description,
   keywords: siteConfig?.keywords?.join(',') ?? '',
   url: siteConfig.site,
