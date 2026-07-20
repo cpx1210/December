@@ -17,7 +17,7 @@ site:
   name: December # 作者名称 - 请修改为你的名字
   description: 网安小白的碎碎念博客 # 网站描述
   avatar: /img/avatar.webp # 网站头像
-  showLogo: true # 是否显示 Logo
+  showLogo: false # 是否显示 Logo
   author: December # 作者名称 - 请修改为你的名字
   url: https://december-kappa.vercel.app # 站点 URL 用于 RSS 和 SEO
   defaultOgImage: /img/avatar.webp # 默认 Open Graph 图片
