@@ -1,4 +1,4 @@
-<img width="2560" height="1540" alt="image" src="https://github.com/user-attachments/assets/1fe668ad-7324-4d99-bf04-9eac4df1a536" />---
+---
 title: 某大学前台sql注入漏洞报告（已修复）
 link: sql1
 catalog: true
