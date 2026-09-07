@@ -1,6 +1,6 @@
----
+<img width="2560" height="1540" alt="image" src="https://github.com/user-attachments/assets/1fe668ad-7324-4d99-bf04-9eac4df1a536" />---
 title: 某大学前台sql注入漏洞报告（已修复）
-link: sql-injection-report
+link: sql1
 catalog: true
 date: 2026-08-13
 updated: 2026-08-15
@@ -25,23 +25,25 @@ keywords:
 ## 2.利用过程
 
 探测漏洞是否存在，发现响应 HTTP 207，同时出现三个标记，路由混淆存在
+![](https://cpx3124004200.oss-cn-guangzhou.aliyuncs.com/test/202609071103852.png)
 
 布尔盲注True：X-WP-Total回显1293
-
+![](https://cpx3124004200.oss-cn-guangzhou.aliyuncs.com/test/202609071106282.png)
 布尔盲注False：X-WP-Total回显28，找到了布尔盲注真假值的回显区别，以下以注出库名为演示
-
+![](https://cpx3124004200.oss-cn-guangzhou.aliyuncs.com/test/202609071107160.png)
 1. 探测数据库长度，length=9时回显1293，说明库名长度为9
-
+![](https://cpx3124004200.oss-cn-guangzhou.aliyuncs.com/test/202609071108077.png)
 2. 用布尔盲注二分法确认库名各字符acsii值，以下是第一位，当为101时X-WP-Total回显1293，说明第一位是e
-
+![](https://cpx3124004200.oss-cn-guangzhou.aliyuncs.com/test/202609071109142.png)
 逐字符探测，最终得到数据库名为exampledb
 
 同样方法探测管理员账号名：
-
-首先验证长度，长度为4
-
-提取第一个字符，asc为116，是t。
-
+首先验证长度，
+![](https://cpx3124004200.oss-cn-guangzhou.aliyuncs.com/test/202609071109142.png)
+长度为4
+提取第一个字符，
+![](https://cpx3124004200.oss-cn-guangzhou.aliyuncs.com/test/202609071112729.png)
+asc为116，是t。
 逐字符探测，得到管理员账户名为test
 
 ## 3.修复建议
