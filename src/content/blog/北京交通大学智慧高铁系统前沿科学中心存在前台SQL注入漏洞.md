@@ -1,10 +1,25 @@
-# 北京交通大学智慧高铁系统前沿科学中心存在前台SQL注入漏洞
-
-2026/8/13
-
+---
+title: 某大学前台sql注入漏洞报告（已修复）
+catalog: true
+date: 2026-08-13
+updated: 2026-08-15
+description: sql注入
+tags:
+  - sql注入
+  - edu
+categories:
+  - 漏洞挖掘
+sticky: true           
+draft: false          
+tocNumbering: true    
+math: false
+password: ""
+keywords:
+  - sql注入
+---
 ## 1.漏洞概述：
 
-目标站点运行 WordPress 6.9.4，存在 CVE-2026-63030（wp2shell）路由混淆漏洞。攻击者无需任何认证，通过向 /wp-json/batch/v1 发送特制的双层嵌套批处理请求，可绕过 REST API 路由校验，，实现未授权布尔盲注。
+目标站点运行 WordPress 6.9.4，存在 CVE-2026-63030（wp2shell）路由混淆漏洞。攻击者无需任何认证，通过向 /wp-json/batch/v1 发送特制的双层嵌套批处理请求，可绕过 REST API 路由校验，实现未授权布尔盲注。
 
 ## 2.利用过程
 
