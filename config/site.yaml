@@ -74,6 +74,7 @@ categoryMap:
   工具: tools
   CTF: ctf
   周刊: weekly
+  漏洞挖掘: vuln 
   # Secondary categories (for nested paths)
   # Add more as needed:
   # 书摘: reading
